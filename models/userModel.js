@@ -16,7 +16,7 @@ const userSchema = new Schema({
        required: true
    },
    status:{
-       typed: Boolean,
+       type: Boolean,
        default: true
    }
 
