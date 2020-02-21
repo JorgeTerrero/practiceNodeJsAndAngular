@@ -35,3 +35,5 @@ userController.regiterUser = async (req, res) => {
     }
 
 };
+
+module.exports = userController;
