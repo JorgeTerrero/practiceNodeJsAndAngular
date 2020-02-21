@@ -13,7 +13,7 @@ userController.regiterUser = async (req, res) => {
         bcrypt.hash(body.password, passwordSalt, async function (err, hash) {
 
             let _user = new userModel({
-                username: body.name,
+                username: body.username,
                 email: body.email,
                 password: hash
             });
@@ -33,6 +33,49 @@ userController.regiterUser = async (req, res) => {
             err
         });
     }
+
+};
+
+
+userController.loginUser = async (req , res) => {
+
+    try {
+
+        let body = req.body;
+        let _user = userModel.find();
+
+        for (let i = 0; i < _user.length; i++) {
+            const element = _user[i].password;
+            
+            if(body.username == _user[i].username){
+
+                bcrypt.compare(body.password , element , function(err , result){
+                     
+                    if(result){
+                        res.json({
+                            Ok: true ,
+                            result: result
+                        });
+                    }else{
+                        res.status(400).json({
+                            Ok: false , 
+                            result: result
+                        });
+                    }
+
+                });
+
+            }
+
+        }
+        
+    } catch (err) {
+        res.status(400).json({
+            Ok: true ,
+            err
+        });
+    }
+
 
 };
 
