@@ -42,7 +42,7 @@ userController.loginUser = async (req , res) => {
     try {
 
         let body = req.body;
-        let _user = userModel.find();
+        let _user = await userModel.find();
 
         for (let i = 0; i < _user.length; i++) {
             const element = _user[i].password;
