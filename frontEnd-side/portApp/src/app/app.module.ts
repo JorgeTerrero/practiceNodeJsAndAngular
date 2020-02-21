@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/components/login/login.component';
-import { HeadersComponent } from './components/components/headers/headers.component';
-import { RegistrarUsuarioComponent } from './components/components/registrar-usuario/registrar-usuario.component';
+import { LoginComponent } from './view/login/login.component';
+import { HeadersComponent } from './view/headers/headers.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeadersComponent,
-    RegistrarUsuarioComponent
+   
   ],
   imports: [
     BrowserModule
