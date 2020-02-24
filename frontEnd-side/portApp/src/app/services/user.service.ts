@@ -13,6 +13,10 @@ public registerUsers(user: any) {
     return this.http.post(`${this.apiUrl}/register` , user);
 }
 
+public loginUser(user: any){
+    return this.http.post(`${this.apiUrl}/login` , user);
+}
+
 }
 
 
