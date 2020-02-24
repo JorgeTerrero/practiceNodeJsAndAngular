@@ -6,5 +6,6 @@ const router = Router();
 
 router.post('/api/register' , cors(), controller.regiterUser);
 router.post('/api/login' , cors(),controller.loginUser);
+router.get('/api/users' , controller.getAllUsers);
 
 module.exports = router;

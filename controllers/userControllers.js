@@ -79,4 +79,23 @@ userController.loginUser = async (req , res) => {
 
 };
 
+userController.getAllUsers = async (req , res) =>{
+
+    try {
+
+        const _user = await userModel.find();
+        res.json(
+            _user
+        );
+        
+    } catch (err) {
+        res.status(400).json({
+            Ok: false ,
+            err
+        })
+    }
+
+
+};
+
 module.exports = userController;

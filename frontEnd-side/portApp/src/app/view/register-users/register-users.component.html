@@ -1,1 +1,41 @@
-<p>register-users works!</p>
+<div class="row">
+    <div class="col-md-12">
+           <div class="card">
+                 <div class="card-header bg-primary text-center text-white">
+                     Register Page
+                 </div>
+                 <div class="card-body">
+
+                    <form #registerForm="ngForm">
+                        
+                        <div class="row form-group">
+                            <label for="username" class=" col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Insert you Username" name="username" [(ngModel)]="user.username">
+                            </div>
+                      </div>
+  
+                      <div class="row form-group">
+                          <label for="email" class=" col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" placeholder="Insert you Email" name="email" [(ngModel)]="user.email">
+                          </div>
+                    </div>
+  
+                      <div class="row form-group">
+                          <label for="pasword" class=" col-sm-2 col-form-label">Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" placeholder="Insert you Password" name="password" [(ngModel)]="user.password">
+                          </div>
+                    </div>
+                    <div class="row form-group">
+                      <button class="btn btn-outline-primary btn-block" (click)="onregisterUser()">Login</button>
+                  </div>
+  
+
+                    </form>
+                 
+                 </div>
+           </div>
+    </div>
+</div>
