@@ -17,6 +17,10 @@ public loginUser(user: any){
     return this.http.post(`${this.apiUrl}/login` , user);
 }
 
+public getAllUsers(){
+    return this.http.get(`${this.apiUrl}/users`);
+}
+
 }
 
 
