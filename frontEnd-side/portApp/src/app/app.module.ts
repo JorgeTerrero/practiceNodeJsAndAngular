@@ -7,6 +7,7 @@ import { LoginComponent } from './view/login/login.component';
 import { HeadersComponent } from './view/headers/headers.component';
 import {RegisterUsersComponent} from './view/register-users/register-users.component';
 import { UserService } from './services/user.service';
+import { UserHomeComponent } from './view/user-home/user-home.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { UserService } from './services/user.service';
     AppComponent,
     LoginComponent,
     HeadersComponent,
-   RegisterUsersComponent
+   RegisterUsersComponent,
+   UserHomeComponent
   ],
   imports: [
     BrowserModule,

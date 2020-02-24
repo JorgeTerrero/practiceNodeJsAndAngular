@@ -1,0 +1,24 @@
+<div class="row">
+        <div class="col-md=12">
+
+            <table class="table table-hover table-bordered" >
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Estatus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of users; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{item.username}}</td>
+                    <td>{{item.email}}</td>
+                    <td [class]="item.status ? 'badge badge-pill badge-success' : 'badge badge-pill badge-danger' "> {{item.status ? 'Active' : 'UnActive'}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+</div>
