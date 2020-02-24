@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 export class UserHomeComponent implements OnInit {
 
   users: any[] = [];
-  _status ='';
+  itemPage: Array<any>;
 
   constructor(private uService: UserService) { }
 
@@ -27,6 +27,9 @@ export class UserHomeComponent implements OnInit {
     });
   }
 
+  onChangePage(pages: Array<any>){
+    this.itemPage = pages;
+  }
   
 
 }

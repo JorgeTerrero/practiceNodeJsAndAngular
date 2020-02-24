@@ -8,7 +8,7 @@ import { HeadersComponent } from './view/headers/headers.component';
 import {RegisterUsersComponent} from './view/register-users/register-users.component';
 import { UserService } from './services/user.service';
 import { UserHomeComponent } from './view/user-home/user-home.component';
-
+import {JwPaginationComponent} from 'jw-angular-pagination';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { UserHomeComponent } from './view/user-home/user-home.component';
     LoginComponent,
     HeadersComponent,
    RegisterUsersComponent,
-   UserHomeComponent
+   UserHomeComponent,
+   JwPaginationComponent
   ],
   imports: [
     BrowserModule,
